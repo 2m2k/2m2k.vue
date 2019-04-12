@@ -1,77 +1,22 @@
 <template>
   <div id="app">
-    <!--<header>-->
-
-      <nav class="navbar navbar-light navbar-expand-xl">
-
-        <a class="navbar-brand" href="#"><img src="../src/assets/logo.png" alt="2m2k" width="120"></a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
-          <i class="demo-icon icon-menu"></i>
-        </button>
-
-        <div class="collapse text-center navbar-collapse" id="mainmenu">
-
-          <ul class="navbar-nav mr-auto">
-
-            <li class="nav-item active">
-              <a class="nav-link" href="#"> Start </a>
-            </li>
-
-            <!--<li class="nav-item dropdown">-->
-            <!--<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Rozwijana opcja </a>-->
-
-            <!--<div class="dropdown-menu" aria-labelledby="submenu">-->
-
-            <!--<a class="dropdown-item" href="#"> Opcja 1 </a>-->
-            <!--<a class="dropdown-item" href="#"> Opcja 2 </a>-->
-
-            <!--<div class="dropdown-divider"></div>-->
-
-            <!--<a class="dropdown-item" href="#"> Opcja 3 </a>-->
-            <!--<a class="dropdown-item" href="#"> Opcja 4 </a>-->
-
-            <!--</div>-->
-
-            <!--</li>-->
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Dania Mięsne </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Dania wegetariańskie </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Słodkości </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Przekąski </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Dodatki do dań </a>
-            </li>
-
-            <div class="dropdown-divider"></div>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> O mnie </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#"> Kontakt </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </nav>
-
-    <!--</header>-->
+    <header>
+      <b-navbar toggleable="xl" type="light" variant="info">
+        <b-navbar-brand href="/"><img src="../src/assets/logo.png" alt="2m2k" width="120"></b-navbar-brand>
+        <b-navbar-toggle target="nav-collapse"><i class="demo-icon icon-menu"></i></b-navbar-toggle>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+            <b-nav-item href="#">Start</b-nav-item>
+            <b-nav-item href="#">Dania mięsne</b-nav-item>
+            <b-nav-item href="#">Dania wegetariańskie</b-nav-item>
+            <b-nav-item href="#">Słodkości</b-nav-item>
+            <b-nav-item href="#">Przekąski</b-nav-item>
+            <b-nav-item href="#">Dodatki do dań</b-nav-item>
+            <b-nav-item href="#">Kontakt</b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </header>
     <router-view/>
     <footer>2m2k &copy; Damian Paluchowski 2019</footer>
   </div>
@@ -89,13 +34,14 @@
 
   nav {
     padding: 7%;
-    background-image: url('assets/photo-1495195134817-aeb325a55b65.jpeg'); /*Photo by Lukas Blazek on Unsplash*/
+    /*background-image: url('assets/photo-1495195134817-aeb325a55b65.jpeg'); !*Photo by Lukas Blazek on Unsplash*!*/
+    background-image: url('https://images.unsplash.com/photo-1526046881250-dbec3e06414c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80'); /*Photo by Lukas Blazek on Unsplash*/
     background-repeat: no-repeat;
     /*background-position: center top;*/
     background-size: cover;
-    -webkit-box-shadow: 0px 10px 39px -5px rgba(0,0,0,0.49);
-    -moz-box-shadow: 0px 10px 39px -5px rgba(0,0,0,0.49);
-    box-shadow: 0px 10px 39px -5px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0 10px 39px -5px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0 10px 39px -5px rgba(0,0,0,0.49);
+    box-shadow: 0 10px 39px -5px rgba(0,0,0,0.49);
   }
 
   footer {
@@ -118,9 +64,9 @@
 
   .nav-link:hover {
     color: darkgreen !important;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
-    box-shadow: 0px 0px 5px 0px rgba(255,255,255,1);
+    /*-webkit-box-shadow: 0 0 5px 0 rgba(255,255,255,1);*/
+    /*-moz-box-shadow: 0 0 5px 0 rgba(255,255,255,1);*/
+    /*box-shadow: 0 0 5px 0 rgba(255,255,255,1);*/
   }
 
 </style>
