@@ -1,50 +1,53 @@
 <template>
-  <div id="app">
-    <header>
-      <b-navbar toggleable="xl" type="light" variant="info">
-        <b-navbar-brand>
-          <router-link v-bind:to="'/'">
-            <img src="../src/assets/logo.png" alt="2m2k" width="120">
-          </router-link>
-        </b-navbar-brand>
-        <b-navbar-toggle target="nav-collapse">
-          <i class="demo-icon icon-menu"></i>
-        </b-navbar-toggle>
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <b-nav-item>
-              <router-link v-bind:to="'/'">Start</router-link>
-            </b-nav-item>
-            <b-nav-item>
-              <router-link v-bind:to="'dania-miesne'">Dania mięsne</router-link>
-            </b-nav-item>
-            <b-nav-item>
-              <router-link v-bind:to="'dania-wegetarianskie'">Dania wegetariańskie</router-link>
-            </b-nav-item>
-            <b-nav-item>
-              <router-link v-bind:to="'slodkosci'">Słodkości</router-link>
-            </b-nav-item>
-            <b-nav-item>
-              <router-link v-bind:to="'przekaski'">Przekąski</router-link>
-            </b-nav-item>
-            <b-nav-item>
-              <router-link v-bind:to="'dodatki'">Dodatki</router-link>
-            </b-nav-item>
-            <b-nav-item>
-              <router-link v-bind:to="'kontakt'">Kontakt</router-link>
-            </b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-    </header>
+<div id="app">
+  <header>
+    <b-navbar toggleable="xl" type="light" variant="info">
+      <b-navbar-brand>
+        <router-link v-bind:to="'/'">
+          <img src="../src/assets/logo.png" alt="2m2k" width="120">
+        </router-link>
+      </b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse">
+        <i class="demo-icon icon-menu"></i>
+      </b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'/'">Start</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'dania-miesne'">Dania mięsne</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'dania-wegetarianskie'">Dania wegetariańskie</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'slodkosci'">Słodkości</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'przekaski'">Przekąski</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'dodatki'">Dodatki</router-link>
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routerlink" v-bind:to="'kontakt'">Kontakt</router-link>
+          </b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-navbar>
+  </header>
+  <body>
+    <b-img src="~/assets/paint-text.jpg"></b-img>
     <router-view/>
-    <footer>2m2k &copy; Damian Paluchowski 2019</footer>
-  </div>
+    <!-- <footer>2m2k &copy; Damian Paluchowski 2019</footer> -->
+  </body>
+</div>
 </template>
 
 <style>
-body {
-  background: #ffffff;
+:root {
+  background-color: #ffffff;
   color: #2a363b;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -71,7 +74,19 @@ footer {
   height: 50px;
   line-height: 50px;
   background-color: #f5f5f5;
-  color: darkgreen;
+  color: #006400;
   font-weight: bold;
+}
+
+.routerlink {
+  color: #2a363b !important;
+  text-decoration: none !important;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.routerlink:hover {
+  color: darkgreen !important;
+  text-shadow: 5px 5px 100px darkgreen;
 }
 </style>
