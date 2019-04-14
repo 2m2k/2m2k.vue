@@ -1,23 +1,52 @@
+/* eslint-disable indent */
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Meat from './views/Meat.vue'
+import Vegetable from './views/Vegetable.vue'
+import Sweets from './views/Sweets.vue'
+import Snacks from './views/Snacks.vue'
+import Additions from './views/Additions.vue'
+import Contact from './views/Contact.vue'
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  mode: 'history',
+  routes: [{
       path: '/',
       name: 'home',
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/dania-miesne',
+      name: 'meat',
+      component: Meat
+    },
+    {
+      path: '/dania-wegetarianskie',
+      name: 'vegetable',
+      component: Vegetable
+    },
+    {
+      path: '/slodkosci',
+      name: 'sweets',
+      component: Sweets
+    },
+    {
+      path: '/przekaski',
+      name: 'snacks',
+      component: Snacks
+    },
+    {
+      path: '/dodatki',
+      name: 'additions',
+      component: Additions
+    },
+    {
+      path: '/kontakt',
+      name: 'contact',
+      component: Contact
     }
   ]
 })
