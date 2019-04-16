@@ -1,7 +1,7 @@
 <template>
 <div id="app">
   <header>
-    <b-navbar toggleable="xl" type="light" variant="info">
+    <b-navbar toggleable="xl" type="light" variant="info" sticky="sticky">
       <b-navbar-brand>
         <router-link v-bind:to="'/'">
           <img src="../src/assets/logo.png" alt="2m2k" width="120">
@@ -38,10 +38,10 @@
     </b-navbar>
   </header>
   <body>
-    <b-img src="~/assets/paint-text.jpg"></b-img>
     <router-view/>
     <!-- <footer>2m2k &copy; Damian Paluchowski 2019</footer> -->
   </body>
+  <footer>2k2mk.tk &copy; Damian Paluchowski 2019</footer>
 </div>
 </template>
 
@@ -54,12 +54,17 @@
   margin: 0;
 }
 
+body {
+  height: 100%;
+  min-height: 100%;
+  position: relative;
+}
+
 nav {
   padding: 7%;
   background-image: url("../src/assets/toa-heftiba-662194-unsplash.jpg");
   /* Photo by Toa Heftiba on Unsplash */
   background-repeat: no-repeat;
-  /*background-position: center top;*/
   background-size: cover;
   -webkit-box-shadow: 0 10px 39px -5px rgba(0, 0, 0, 0.49);
   -moz-box-shadow: 0 10px 39px -5px rgba(0, 0, 0, 0.49);
@@ -67,14 +72,14 @@ nav {
 }
 
 footer {
-  margin-top: 22px;
+  margin-top: 1%;
   text-align: center;
   bottom: 0;
   width: 100%;
   height: 50px;
   line-height: 50px;
-  background-color: #f5f5f5;
-  color: #006400;
+  background-color: #e2e8e4;
+  color: #2a363b;
   font-weight: bold;
 }
 

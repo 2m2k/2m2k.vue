@@ -6,6 +6,8 @@ module.exports = {
       .loader('vue-loader')
       .tap(options => {
         options['transformAssetUrls'] = {
+          video: ['src', 'poster'],
+          source: 'src',
           img: 'src',
           image: 'xlink:href',
           'b-img': 'src',

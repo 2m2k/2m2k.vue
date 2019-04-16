@@ -8,6 +8,7 @@ import Sweets from './views/Sweets.vue'
 import Snacks from './views/Snacks.vue'
 import Additions from './views/Additions.vue'
 import Contact from './views/Contact.vue'
+import Faszerowanapaprykapage from './recipes-page/Faszerowana-papryka-page.vue'
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
       path: '/kontakt',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/faszerowana-papryka',
+      name: 'faszerowana-papryka',
+      component: Faszerowanapaprykapage
     }
   ]
 })
